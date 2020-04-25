@@ -1,9 +1,9 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="traditionalcombiner:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/traditionalcombiner_jar</output-path>
+  <artifact type="jar" name="InMapper:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/InMapper_jar</output-path>
     <root id="archive" name="CS4296A2.jar">
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/src/test/java/META-INF/MANIFEST.MF" />
       </element>
       <element id="module-output" name="CS4296A2" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar" path-in-jar="/" />
