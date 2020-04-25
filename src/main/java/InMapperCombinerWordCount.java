@@ -19,6 +19,7 @@ public class InMapperCombinerWordCount {
         private final static IntWritable one = new IntWritable(1);
         private Text word = new Text();
         private java.util.Map<String,Integer> wordMap = new HashMap<String,Integer>();
+
         public void map(Object key, Text value, Context context
         ) throws IOException, InterruptedException {
 
@@ -34,13 +35,9 @@ public class InMapperCombinerWordCount {
                         wordMap.put(s, 1);
                     }
                 }
-
-
             }
-
-
-
         }
+
         public void cleanup(Context context) throws IOException, InterruptedException {
             for(String key:wordMap.keySet()){
                 Integer value = wordMap.get(key);
@@ -77,7 +74,6 @@ public class InMapperCombinerWordCount {
         job.setJarByClass(InMapperCombinerWordCount.class);
         job.setMapperClass(TokenizerMapper.class);
         job.setReducerClass(IntSumReducer.class);
-        job.setCombinerClass(IntSumReducer.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
         FileInputFormat.addInputPath(job, new Path(args[0]));
